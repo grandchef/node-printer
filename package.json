@@ -2,10 +2,63 @@
   "name": "@grandchef/node-printer",
   "description": "Node.js printer bindings",
   "version": "0.7.1",
-  "main": "./lib/printer",
+  "author": {
+    "name": "Ion Lupascu",
+    "url": "http://program-support.co.uk/",
+    "email": "ionlupascu@gmail.com"
+  },
+  "binary": {
+    "module_name": "node_printer",
+    "module_path": "./lib/binding",
+    "host": "https://github.com/grandchef/node-printer/releases/download/",
+    "remote_path": "v{version}"
+  },
+  "contributors": [
+    "Thiago Lugli <thiagoelg@gmail.com>",
+    "Eko Eryanto <ekoeryanto@gmail.com>",
+    "Francimar Alves <mazinsw@gmail.com>"
+  ],
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.9",
+    "nan": "^2.15.0",
+    "prebuild-install": "^7.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.48.0",
+    "eslint-config-egg": "^12.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "node-abi": "^3.8.0",
+    "nodeunit": "*",
+    "patch-package": "^8.0.0",
+    "prebuild": "^11.0.4",
+    "prebuild-ci": "^4.0.0",
+    "node-gyp": "^9.4.0"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "exports": {
     ".": "./lib/printer.js",
     "./build": "./build.js"
+  },
+  "keywords": [
+    "native",
+    "node",
+    "printer"
+  ],
+  "license": "MIT",
+  "main": "./lib/printer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grandchef/node-printer.git"
   },
   "scripts": {
     "apply-patches": "patch-package",
@@ -14,57 +67,5 @@
     "rebuild": "node-gyp rebuild",
     "test": "nodeunit test"
   },
-  "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.9",
-    "nan": "^2.15.0",
-    "prebuild-install": "^7.0.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "eslint": "^7.11.0",
-    "eslint-config-egg": "^8.1.2",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "node-abi": "^3.8.0",
-    "nodeunit": "*",
-    "patch-package": "^6.4.7",
-    "prebuild": "^11.0.4",
-    "prebuild-ci": "^4.0.0"
-  },
-  "engines": {
-    "node": ">= 4.0.0"
-  },
-  "binary": {
-    "module_name": "node_printer",
-    "module_path": "./lib/binding",
-    "host": "https://github.com/grandchef/node-printer/releases/download/",
-    "remote_path": "v{version}"
-  },
-  "directories": {
-    "example": "examples",
-    "lib": "lib",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/grandchef/node-printer.git"
-  },
-  "keywords": [
-    "native",
-    "node",
-    "printer"
-  ],
-  "types": "types/index.d.ts",
-  "author": {
-    "name": "Ion Lupascu",
-    "url": "http://program-support.co.uk/",
-    "email": "ionlupascu@gmail.com"
-  },
-  "contributors": [
-    "Thiago Lugli <thiagoelg@gmail.com>",
-    "Eko Eryanto <ekoeryanto@gmail.com>",
-    "Francimar Alves <mazinsw@gmail.com>"
-  ],
-  "license": "MIT"
+  "types": "types/index.d.ts"
 }

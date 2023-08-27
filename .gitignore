@@ -17,3 +17,5 @@ prebuilds/
 *.node
 *.swp
 *.log
+
+.vscode
