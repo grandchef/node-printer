@@ -37,6 +37,9 @@
     "prebuild-ci": "^4.0.0",
     "node-gyp": "^9.4.0"
   },
+  "resolutions": {
+    "node-gyp": "^9.4.0"
+  },
   "directories": {
     "example": "examples",
     "lib": "lib",
