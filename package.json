@@ -31,14 +31,11 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "node-abi": "^3.8.0",
+    "node-gyp": "^9.4.0",
     "nodeunit": "*",
     "patch-package": "^8.0.0",
     "prebuild": "^11.0.4",
-    "prebuild-ci": "^4.0.0",
-    "node-gyp": "^9.4.0"
-  },
-  "resolutions": {
-    "node-gyp": "^9.4.0"
+    "prebuild-ci": "^4.0.0"
   },
   "directories": {
     "example": "examples",
@@ -62,6 +59,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/grandchef/node-printer.git"
+  },
+  "resolutions": {
+    "node-gyp": "^9.4.0"
+  },
+  "overrides": {
+    "node-gyp": "^9.4.0"
   },
   "scripts": {
     "apply-patches": "patch-package",
