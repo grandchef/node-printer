@@ -1,7 +1,8 @@
 {
   "variables": {
     "module_name%": "node_printer",
-    "module_path%": "lib/binding"
+    "module_path%": "lib/binding",
+    "openssl_fips": ""
   },
   'targets': [
     {
@@ -61,7 +62,7 @@
             "-stdlib=libc++"
           ],
           'xcode_settings': {
-            "OTHER_CPLUSPLUSFLAGS":["-std=c++14", "-stdlib=libc++"],
+            "OTHER_CPLUSPLUSFLAGS":["-std=c++17", "-stdlib=libc++"],
             "OTHER_LDFLAGS": ["-stdlib=libc++"],
             "MACOSX_DEPLOYMENT_TARGET": "10.7",
           },
