@@ -66,7 +66,7 @@
           ],
           "msvs_settings": {
             "VCCLCompilerTool": {
-              "AdditionalOptions": [ "-std:c++17", ],
+              "AdditionalOptions": [ "-std:c++20", ],
             },
           },
         }],
@@ -75,14 +75,14 @@
             "-stdlib=libc++"
           ],
           'xcode_settings': {
-            "OTHER_CPLUSPLUSFLAGS":["-std=c++17", "-stdlib=libc++"],
+            "OTHER_CPLUSPLUSFLAGS":["-std=c++20", "-stdlib=libc++"],
             "OTHER_LDFLAGS": ["-stdlib=libc++"],
             "MACOSX_DEPLOYMENT_TARGET": "14.0",
           },
         }],
         ['OS=="linux"', {
           'cflags_cc':[
-            "-std=c++17"
+            "-std=c++20"
           ]
         }],
       ]
